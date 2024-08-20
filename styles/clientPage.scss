@@ -1,0 +1,46 @@
+.client-header {
+    @apply bg-base-red justify-between items-center text-2xl font-bold;
+    .client-logo {
+        @apply text-white;
+    }
+
+    .client-nav {
+        @apply font-bold text-white text-lg;
+        &:hover {
+            @apply text-darker-red;
+        } 
+    }
+}
+
+.client-button {
+    @apply mr-2 text-sm font-bold rounded-lg px-2 py-1 bg-white text-base-red border border-base-red;
+    &:hover {
+        @apply bg-base-red text-white;
+    }
+}
+
+.client-title {
+    @apply font-bold text-lg text-darker-red;
+}
+
+.client-error {
+    @apply bg-base-red text-white rounded-md p-2 mt-3 font-bold mb-3;
+}
+
+.client-subtitle {
+    @apply text-sm text-base-red;
+}
+
+.client-page {
+    @apply p-5 max-w-[800px] w-full;
+}
+
+.toast-manager {
+    @apply w-full fixed bottom-5 left-0 flex flex-col items-center justify-center z-50;
+    .toast {
+        @apply bg-light-red flex text-white justify-between rounded-lg z-50 p-4 w-11/12 m-2;
+        .close-button {
+            @apply ml-3;
+        }
+    }
+}

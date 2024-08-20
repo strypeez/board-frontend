@@ -1,0 +1,40 @@
+.main-carousel {
+    @apply m-5 relative sm:h-[32rem] h-[28rem] overflow-hidden;
+}
+
+.categoryList {
+    @apply flex flex-col m-5 p-5 rounded-md bg-white drop-shadow-md;
+    .category-header {
+        @apply mb-5 flex justify-between items-center;
+    }
+    .category-title {
+        @apply text-xl font-bold text-darker-red;
+    }
+    .category-description {
+        @apply text-sm text-base-red;
+    }
+
+    .category-items-container {
+        @apply flex overflow-x-auto scroll-smooth ;
+    }   
+}
+
+.category-item {
+    @apply mr-3 mb-3 w-48 shrink-0 bg-white rounded-md drop-shadow-md hover:drop-shadow-lg;
+    .category-item-image {
+        @apply object-fill h-40 w-full rounded-tl-md rounded-tr-md;
+    }
+    .category-item-text {
+        @apply p-3;
+        .category-item-title {
+            @apply text-xl font-bold text-darker-red;
+        }
+        .category-item-info {
+            @apply flex justify-between items-end text-darker-red;
+        }
+
+        .category-item-price {
+            @apply text-2xl text-base-red font-bold text-2xl; 
+        }
+    }
+}

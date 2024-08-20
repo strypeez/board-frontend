@@ -1,0 +1,169 @@
+.admin-form-field {
+    @apply p-1 bg-transparent;
+    &:focus-visible {
+        outline: 1px solid black;
+    }
+}
+
+.search-title {
+    @apply text-lg text-base-red font-bold;
+}
+
+.search-bar {
+    @apply border-b border-black p-2 bg-transparent;
+}
+
+.empty-selection {
+    @apply flex border w-full items-center justify-center bg-dark-red p-5 rounded-md mb-5;
+    p {
+        @apply text-white font-bold;
+    }
+}
+
+.admin-title {
+    @apply text-shadow text-2xl font-bold;
+}
+
+.admin-order {
+    @apply mt-3 bg-white rounded-tl-md rounded-tr-md border-b p-3 font-bold flex justify-between;
+    .admin-order-title {
+        @apply text-darker-red;
+    }
+
+    .admin-order-number {
+        @apply text-base-red;
+    }
+
+    .admin-order-state {
+        @apply text-darker-red;
+    }
+
+    .admin-order-state-select {
+        @apply text-base-red;
+    }
+}
+
+.admin-order-items {
+    @apply bg-white p-3 drop-shadow-md;
+
+    .admin-order-title {
+        @apply text-darker-red;
+    }
+}
+
+.admin-order-quantity {
+    @apply text-xl text-darker-red;
+}
+
+.admin-list-item {
+    @apply flex mt-5 mb-3 drop-shadow-md bg-white rounded-md;
+    .admin-list-item-image {
+        @apply rounded-tl-md rounded-bl-md object-fill h-24 w-24 ;
+    }
+    .admin-list-item-title {
+        @apply text-shadow text-xl font-bold;
+    }
+
+    .admin-list-item-quantity {
+        @apply text-xs text-shadow;
+    }
+
+    .admin-list-item-price {
+        @apply text-lg font-bold ml-2 text-base-red;
+    }
+}
+
+.admin-list-edit-item {
+    @apply mt-2 p-5 bg-white rounded-md drop-shadow-md;
+}
+
+.admin-category-item {
+    @apply my-5 p-5 rounded-md bg-white drop-shadow-md;
+
+    .admin-category-item-title {
+        @apply text-lg font-bold text-darker-red;
+    }
+
+    .admin-category-item-subtitle {
+        @apply mb-2 text-sm text-shadow;
+    }
+}
+
+.admin-category-edit-form {
+    @apply max-w-full m-5 p-5 rounded-md bg-white drop-shadow-md;
+
+    .admin-category-edit-form-title {
+        @apply text-xl font-extrabold text-darker-red;
+    }
+}
+
+.admin-form-field-title {
+    @apply font-bold text-lg text-base-red; 
+}
+
+.admin-item-edit-form {
+    .admin-item-edit-form-title {
+        @apply text-2xl font-bold text-darker-red;
+    }
+}
+
+.admin-loading {
+    @apply p-5 text-base-red font-bold text-2xl;
+}
+
+.admin-button {
+    @apply mr-2 text-sm font-bold rounded-lg px-2 py-1 bg-white text-base-red border border-base-red;
+    &:hover {
+        @apply bg-base-red text-white;
+    }
+}
+
+.admin-error {
+    @apply bg-base-red text-white rounded-md p-2 mt-3 font-bold mb-3;
+}
+
+.admin-dashboard-header {
+    @apply bg-base-red text-white p-3 mt-5 rounded-t-md text-lg font-bold justify-between flex;
+}
+
+.admin-dashboard-body {
+    @apply border p-3 drop-shadow-md bg-white;
+}
+
+.admin-page {
+    @apply p-5 max-w-[800px] w-full;
+}
+
+.admin-header {
+    @apply bg-base-red justify-between items-center;
+    .admin-logo {
+        @apply text-white text-2xl font-bold cursor-pointer;
+    }
+
+    .admin-nav {
+        @apply font-bold text-white;
+        &:hover {
+            @apply text-darker-red;
+        } 
+    }
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    @apply bg-lighter-red;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    @apply bg-dark-red;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-darker-red;
+  }

@@ -1,0 +1,30 @@
+.cart-item {
+    @apply rounded-md bg-white mb-3 flex;
+    .cart-item-image {
+        @apply 
+        h-32
+        rounded-tl-md
+        rounded-bl-md
+        w-32;
+    }
+
+    .cart-item-details {
+        @apply p-3;
+        .cart-item-title {
+            @apply text-lg font-bold text-darker-red;
+        }
+        .cart-item-price {
+            @apply text-xl font-bold text-base-red;
+        }
+        .cart-item-controls {
+            @apply flex mt-3;
+            .cart-item-delete {
+                @apply px-3 border border-black h-8 flex items-center justify-center ml-3;
+            }
+        }
+    }
+}
+
+.client-cart-number {
+    @apply flex justify-center items-center bg-darker-red rounded-full text-lg mr-1 text-white p-2 w-7 h-7; 
+}

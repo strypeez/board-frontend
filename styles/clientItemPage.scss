@@ -1,0 +1,28 @@
+.client-item-page {
+    @apply p-10 flex flex-col sm:flex-row;
+
+    .client-item-price {
+        @apply ml-3 text-3xl font-bold text-base-red;
+    }
+    .client-item-page-title {
+        @apply text-2xl font-bold p-3 border-b text-darker-red;
+    }
+
+    .left-col {
+        @apply w-full border-r sm:w-8/12 bg-white;
+        .description-container {
+            @apply hidden sm:p-3 sm:block;
+        }
+    }
+    .right-col {
+        @apply w-full sm:w-4/12 sm:border-l-0 border-b bg-white;
+    }
+
+    .description-container-mobile {
+        @apply block p-3 rounded-br-md rounded-bl-md drop-shadow-md sm:hidden bg-white;
+    }
+}
+
+.client-item-page-subheading {
+    @apply text-lg font-bold text-darker-red;
+}
