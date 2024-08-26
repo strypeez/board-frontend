@@ -7,7 +7,13 @@ import { Category } from '@/models/categoryModel';
 import CategoryGame from '@/app/(client)/components/categoryGame';
 import { DefaultCategory } from '@/defaults';
 
-export default function CategoryTable({categoryData, gamesData, error}) {
+type CategoryTableProps = {
+    categoryData: any,
+    gamesData: any,
+    error: any
+}
+
+export default function CategoryTable({categoryData, gamesData, error}: CategoryTableProps) {
     
     const [category, setCategory] = useState<Category>(DefaultCategory);
     const [games, setGames] = useState<Game[]>([]);

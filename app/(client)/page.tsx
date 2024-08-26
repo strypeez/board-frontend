@@ -15,7 +15,7 @@ export default async function Home() {
           }
       );
       carouselData = gameData.data.data;
-    } catch (e) {
+    } catch (e: any) {
       if (e?.response?.status === 500) {
           carouselError = e.response.data;
       }
@@ -24,7 +24,7 @@ export default async function Home() {
     try {
       const data = await axios.get(`https://board-backend-b9tn.onrender.com/categories/`);
       categoryData = data.data.data;
-    } catch (e) {
+    } catch (e: any) {
       console.log('we are in the error of category', e)
       if (e?.response?.status === 500) {
           categoryError = e.response.data;

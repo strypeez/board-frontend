@@ -37,7 +37,6 @@ export default async function Admin() {
 try {
   const newData = await axios.get(`https://board-backend-b9tn.onrender.com/orders/`)
   orderDashData = newData.data.data;
-  console.log('this is orderDashData', orderDashData)
   const setOfGames: Set<string> = orderDashData.reduce((list: Set<string>, current:Order) => {
     const cartGames = current.cart;
     cartGames.forEach((game) => {

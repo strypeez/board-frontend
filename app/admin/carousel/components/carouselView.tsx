@@ -21,9 +21,6 @@ export default function CarouselView({carouselData, carouselError, gamesData, ga
     const [filteredGames, setFilteredGames] = useState<JSX.Element[]>([]);
     const [errMessage, setErrMessage] = useState("");
 
-    console.log('this is carouselData', carouselData);
-    console.log('this is gamesData', gamesData);
-
     const handleSelectedGames = useCallback((id: string) => {
         if (carouselItems.includes(id)) {
             const itemIndex = carouselItems.indexOf(id);

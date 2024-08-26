@@ -24,8 +24,6 @@ export default function Cart() {
     const [total, setTotal] = useState<number>(0);
     const [errMessage, setErrMessage] = useState('');
 
-    console.log('this is items', items)
-
     const router = useRouter();
     const handleQuantityChange = (id: string, newQuantity: number) => {
         const newCart = items.map((game: ItemCart) => {

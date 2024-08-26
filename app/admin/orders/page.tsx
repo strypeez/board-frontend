@@ -11,11 +11,9 @@ export default async function OrdersPage() {
     try {
         const newData = await axios.get(`https://board-backend-b9tn.onrender.com/orders/`)
         orderData = newData.data.data;
-        console.log('this is orderData', orderData)
         const setOfGames: Set<string> = orderData.reduce((list: Set<string>, current: Order) => {
             const cartGames = current.cart;
             cartGames.forEach((game) => {
-                console.log('this is Game in orders page', game)
                 list.add(game.item)
             });
             return list;

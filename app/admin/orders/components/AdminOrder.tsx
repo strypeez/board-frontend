@@ -37,7 +37,7 @@ export default function AdminOrder({
                 cart: newCart,
                 newOrder: {...order, state: 'Cancelled'}
             });
-        } catch (e) {
+        } catch (e: any) {
             if (e.response.status === 500) {
                 setErrMessage(e.response.data)
             }
@@ -49,7 +49,7 @@ export default function AdminOrder({
             await axios.put(`https://board-backend-b9tn.onrender.com/orders/order/${order._id}`, {
                 newOrder
             })
-        } catch (e) {
+        } catch (e: any) {
             if (e.response.status === 500) {
                 setErrMessage(e.response.data)
             }

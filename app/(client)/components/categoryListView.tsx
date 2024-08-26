@@ -4,7 +4,12 @@ import CategoryItemView from './categoryItemView';
 
 import { Category } from '@/models/categoryModel';
 
-export default function CategoryListView({data, error}) {
+type CategoryListViewProps = {
+    data: any
+    error: any
+}
+
+export default function CategoryListView({data, error}: CategoryListViewProps) {
     const [categories, setCategories] = useState<Category[]>([]);
     const [errMessage, setErrMessage] = useState<string>('');
 

@@ -9,7 +9,12 @@ import { Category } from '@/models/categoryModel';
 
 import axios from 'axios';
 
-export default function CategoriesView({categoryData, categoryError}) {
+type CategoriesViewProps = {
+  categoryData: any
+  categoryError: any
+}
+
+export default function CategoriesView({categoryData, categoryError}: CategoriesViewProps) {
     const [isAddOpen, setIsAddOpen] = useState<boolean>(false);
     const [errMessage, setErrMessage] = useState();
 
@@ -22,7 +27,7 @@ export default function CategoriesView({categoryData, categoryError}) {
         });
   
         window.location.reload();
-      } catch (e) {
+      } catch (e: any) {
         if (e.response.status === 500) {
           setErrMessage(e.response.data)
         }

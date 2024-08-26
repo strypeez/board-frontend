@@ -6,8 +6,12 @@ import SlideSelector from "./slideSelector";
 import { Game } from "@/models/gameModel";
 import { DefaultGame } from "@/defaults";
 
+type MainCarouselProps = {
+    data: any
+    error: any
+}
 
-export default function MainCarousel({data, error}) {
+export default function MainCarousel({data, error}: MainCarouselProps) {
     const [carouselGames, setCarouselGames] = useState<Game[]>([DefaultGame]);
     const [carouselIndex, setCarouselIndex] = useState<number>(0);
     const [errMessage, setErrMessage] = useState('');

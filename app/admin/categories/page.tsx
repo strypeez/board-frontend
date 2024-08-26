@@ -13,7 +13,7 @@ export default async function Categories() {
   try {
       const data = await axios.get(`https://board-backend-b9tn.onrender.com/categories/`);
       categoryData = data.data.data;
-  } catch (e) {
+  } catch (e: any) {
       if (e.response.status === 500) {
           categoryError = e.response.data;
       }

@@ -25,7 +25,6 @@ export async function deleteGame(gameId: string) {
     );
     const res2 = await GameModel.deleteOne({ _id: gameId });
   } catch (error) {
-    console.log("this is the error in deleteGame", getErrorMessage(error));
     return { errMsg: getErrorMessage(error) };
   }
 }
@@ -70,7 +69,6 @@ export async function updateGame(gameId: string, params: Game) {
       }
     );
   } catch (error) {
-    console.log("this is ther error", error);
     return { errMsg: getErrorMessage(error) };
   }
 }
@@ -81,7 +79,6 @@ export async function getGamesList(items:string[]): Promise<GamesResponse | {err
     const data = await GameModel.find({ _id: items });
     return { data };
   } catch (error) {
-    console.log("this is the error of getGamesList", await getErrorMessage(error));
     return { errMsg: await getErrorMessage(error) };
   }
 }

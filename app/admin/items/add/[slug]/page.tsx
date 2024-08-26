@@ -33,7 +33,7 @@ export default function AddItem({params}: { params: {slug:string}} ) {
     const [errMessage, setErrMessage] = useState('');
     const router = useRouter();
 
-    const handleSubmit = async (data) => {
+    const handleSubmit = async (data: any) => {
         try {
             await axios.post(`https://board-backend-b9tn.onrender.com/games/create`, {
                 params: {
@@ -41,7 +41,7 @@ export default function AddItem({params}: { params: {slug:string}} ) {
                 }
               });
             router.push('/admin/items');
-        } catch (e) {
+        } catch (e: any) {
             if (e.response.status === 500) {
                 setErrMessage(e.response.data)
             }

@@ -1,7 +1,16 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/(client)/cart/page": "app/(client)/cart/page.js",
+  "/(client)/category/[slug]/page": "app/(client)/category/[slug]/page.js",
+  "/(client)/item/[slug]/page": "app/(client)/item/[slug]/page.js",
   "/(client)/page": "app/(client)/page.js",
+  "/admin/carousel/page": "app/admin/carousel/page.js",
+  "/admin/categories/edit/[slug]/page": "app/admin/categories/edit/[slug]/page.js",
   "/admin/categories/page": "app/admin/categories/page.js",
+  "/admin/items/add/[slug]/page": "app/admin/items/add/[slug]/page.js",
+  "/admin/items/add/page": "app/admin/items/add/page.js",
+  "/admin/items/page": "app/admin/items/page.js",
+  "/admin/orders/page": "app/admin/orders/page.js",
   "/admin/page": "app/admin/page.js"
 }

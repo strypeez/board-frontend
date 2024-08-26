@@ -20,7 +20,7 @@ export default function AdminGameItem({game, clickFunction, showButtons}: AdminG
     const handleDelete = async function() {
         try {
             await axios.delete(`https://board-backend-b9tn.onrender.com/games/game/delete/${game._id}`)   
-        } catch (e) {
+        } catch (e: any) {
             if (e.response.status === 500) {
                 setErrMessage(e.response.data)
             }

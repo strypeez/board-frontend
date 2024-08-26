@@ -24,7 +24,7 @@ export default function SearchItem({games, selectedGames, handleSelectedGames}: 
         setFilteredGames(newGames);
     }, [searchValue, games, handleSelectedGames, selectedGames])
 
-    const handleChange = (e) => {
+    const handleChange = (e: any) => {
         setSearchValue(e.target.value);
     }
 

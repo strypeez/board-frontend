@@ -21,7 +21,7 @@ export default function CategoryItem({category}: CategoryItemType) {
     const handleDelete = async function() {
         try {
             await axios.delete(`https://board-backend-b9tn.onrender.com/categories/category/${category._id}`);
-        } catch (e) {
+        } catch (e: any) {
             if (e.response.status === 500) {
                 setErrMessage(e.response.data);
             }
@@ -35,7 +35,7 @@ export default function CategoryItem({category}: CategoryItemType) {
                     items: category.items,
                 });
                 setGameItems(data.data.data);
-            } catch (e) {
+            } catch (e: any) {
                 if (e.response.status === 500) {
                     setErrMessage(e.response.data);
                 }

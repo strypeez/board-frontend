@@ -17,7 +17,6 @@ export default function CategoryItemView({category}: CategoryItemViewType) {
     useEffect(() => {
         async function retrieveGames() {
             try {
-                console.log('this is before game data')
                 const gameData = await axios.post(
                     `https://board-backend-b9tn.onrender.com/games/list`,
                     {
@@ -25,8 +24,7 @@ export default function CategoryItemView({category}: CategoryItemViewType) {
                     }
                 );
                 setCategoryGames(gameData.data.data);
-            } catch (e) {
-                console.log('this is e', e)
+            } catch (e: any) {
                 if (e.response.status === 500) {
                     setErrMessage(e.response.data) 
                 }

@@ -3,8 +3,15 @@
 import { useEffect, useState } from "react";
 import AdminOrder from "../orders/components/AdminOrder";
 import Link from "next/link";
+import { Game } from "@/models/gameModel";
 
-export default function OrderDashboard({orderDashData, orderError, orderGamesData}) {
+type OrderDashboardProps = {
+    orderDashData: any
+    orderError: any
+    orderGamesData: any
+}
+
+export default function OrderDashboard({orderDashData, orderError, orderGamesData}: OrderDashboardProps) {
 
     const [orders, setOrders] = useState([])
     const [games, setGames] = useState<{[key: string]: Game}>({});
@@ -25,7 +32,7 @@ export default function OrderDashboard({orderDashData, orderError, orderGamesDat
         </div>
         <div className="admin-dashboard-body">
         {errMessage && <div className="admin-error">{errMessage}</div>}
-        { orders.map((order) => {
+        { orders.map((order: any) => {
             return <AdminOrder games={games} order={order} key={order._id} />
         }).slice(0, 3)}
         </div>        

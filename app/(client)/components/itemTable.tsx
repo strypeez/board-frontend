@@ -7,7 +7,12 @@ import { Game } from '@/models/gameModel';
 import { DefaultGame } from '@/defaults';
 import axios from 'axios';
 
-export default function ItemTable({data, error}) {
+type ItemTableProps = {
+    data: any
+    error: any
+}
+
+export default function ItemTable({data, error}: ItemTableProps) {
     const [game, setGame] = useState<Game>(DefaultGame)
     const { addItem, addToast } = useCartStore((state) => state,)
     const [errMessage, setErrMessage] = useState('');

@@ -16,8 +16,6 @@ export default function CategoryList({categoryData, categoryError}: CategoryList
     const [categories, setCategories] = useState<Category[]>([]);
     const [errMessage, setErrMessage] = useState<string>('');
 
-    console.log('this is category data', categoryData);
-
     useEffect(() => {
         const socket = io(`https://board-backend-b9tn.onrender.com`);
         socket.on('DELETE_CATEGORY', async (data) => {
